@@ -30,7 +30,8 @@ To get started with Poteitos Engine, follow these installation steps:
 2. Open the Solution
 3. Profit
 
-The project files can be downloaded and compiled manually if you dislike using IDEs as much as I do.
+The project files can be downloaded and compiled manually if you dislike using IDEs as much as I do. Just make sure you link opengl and glut.
+Just beware of the damned system call in the main file: system("chcp 65001>nul"); it should not generate any errors on operating systems that are not Windows, as it is piped to nul, but this system call only exists with the express purpose of adding ANSI escape sequence support to the command prompt so that the utility functions can look cooler. In any case, delete that line of code if you want to run this on an operating system that is not windows.
 
 ## Usage
 Once you have installed the project, you can begin using the simple classes implemented in the Poteitos Engine to create your own game logic.
